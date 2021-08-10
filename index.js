@@ -2,7 +2,10 @@ const panels = document.querySelectorAll(".panel");
 
 panels.forEach((panel) => {
   panel.addEventListener("click", function openToggle() {
-    panel.classList.toggle("open");
+    panels.forEach((panel) => {
+      panel.classList.remove("open");
+    });
+    panel.classList.add("open");
   });
 });
 
